@@ -1,0 +1,158 @@
+/********************************************************/
+                     /* IMPORTS */
+/********************************************************/
+
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+/* font-family: 'Space Grotesk', sans-serif; */
+
+
+/********************************************************/
+                     /* VARIABLES */
+/********************************************************/
+
+
+:root {
+
+
+/* COLORS */
+--white: hsl(0, 0%, 100%);
+--light-nuetral-color: hsl(270, 3%, 87%);
+--dark-nuetral-color: hsl(279, 6%, 55%);
+--dark-color: hsl(278, 68%, 11%);
+--active-border-color-light: hsl(249, 99%, 64%);
+--active-border-color-dark: hsl(278, 94%, 30%);
+--input-error-color: hsl(0, 100%, 66%); 
+
+
+/* FONT FAMILY */
+--main-font-family: 'Space Grotesk', sans-serif;
+
+
+}
+
+
+/********************************************************/
+                    /* MAIN STYLES */
+/********************************************************/
+
+
+/* html */
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* body */
+body {
+  font-family: var(--main-font-family);
+  font-weight: 500;
+}
+
+
+/* Header */
+.header {
+  height: 15rem;
+  background-image: url(../images/bg-main-mobile.png);
+  display: relative;
+}
+
+
+/* Card Container */
+.card-container {
+  width: 21.4375rem;
+  height: 15.6875rem;
+  position: relative;
+  top: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* Card Front
+   Card Back */
+.card-front,
+.card-back {
+  width: 17.875rem;
+  height: 9.8125rem;
+  background-size: contain;
+  position: absolute;
+}
+
+
+
+/* Card Front */
+.card-front {
+  padding-top: 1.1rem;
+  padding-bottom: 1.225rem;
+  padding-left: 1.1875rem;
+  background-image: url(../images/bg-card-front.png);
+  left: 0rem;
+  bottom: 0rem;
+  z-index: 1;
+  color: var(--white);
+}
+
+
+/* Card Back */
+.card-back {
+  background-image: url(../images/bg-card-back.png);
+  top: 0rem;
+  right: 0rem;
+}
+
+
+/* CVC Code Image */
+.cvc-code-img {
+  position: absolute;
+  top: 4.5rem;
+  left: 14.31125rem;
+  font-size: 0.5625rem;
+  line-height: 0.7175rem;
+  letter-spacing: 0.080625rem;
+}
+
+
+/* Card Logo */
+.card-logo {
+  width: 3.375rem;
+  height: 1.875rem;
+  background-image: url(../images/card-logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: center;
+}
+
+
+/* CC Number */
+.cc-number {
+  margin-top: 2.3125rem;
+  margin-bottom: 1.0625rem;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  letter-spacing: 0.1375rem;
+}
+
+
+/* Name and Expiration Container */
+.name-and-exp-container {
+  margin-right: 1.305625rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.5625rem;
+  line-height: 0.6875rem;
+  letter-spacing: 0.080625rem;
+}
+
+
+
+.confirmation-container {
+  display: none;
+}

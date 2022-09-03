@@ -5,47 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
   
   <title>Frontend Mentor | Interactive card details form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <!-- Header Start -->
+  <header class="header">
+    <div class="card-container">
+      <div id="card-front" class="card-front">
+        <div class="card-logo"></div>
+        <div id="cc-number" class="cc-number">0000 0000 0000 0000</div>
+        <div class="name-and-exp-container">
+          <div id="cc-name" class="cc-name">Jane Appleseed</div>
+          <div id="cc-exp-container" class="cc-exp-container">
+            <p id="cc-exp" class="cc-exp"><span id="exp-month">00</span>/<span id="exp-year" class="exp-year">00</span></p>
+          </div>
+        </div>
+      </div>
+      <div id="card-back" class="card-back">
+        <div id="cvc-code-img" class="cvc-code-img">000</div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
 
-  000
+  <!-- Main Start -->
+  <main class="form-container">
+    <form id="card-info-form" class="card-info-form">
 
-  Cardholder Name
-  e.g. Jane Appleseed
+      <!-- Cardholder Name Start -->
+      <label for="cardholder-name" class="form-label">Cardholder Name</label><br>
+      <input type="text" id="cardholder-name" class="form-input" name="cardholder-name" value="e.g. Jane Appleseed"><br>
+      <p id="cardholder-name-error" class="input-error"></p>
+      <!-- Cardholder Name End -->
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+      <!-- Card Number Start -->
+      <label for="card-number" class="form-label">Card Number</label><br>
+      <input type="text" id="card-number" class="form-input" name="card-number" value="e.g. 1234 5678 9123 0000">
+      <p id="card-number-error" class="input-error"></p>
+      <!-- Card Number End -->
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+      <!-- Card Expiration Start -->
+      <fieldset>
+        <legend class="form-label">Exp. Date (MM/YY)</legend>
+        <label for="month"></label>
+        <input type="text" id="month" class="form-input" name="month" value="MM"><br>
+        <label for="year"></label>
+        <input type="text" id="month" class="form-input" name="month" value="YY"><br>
+      </fieldset>
+      <p id="exp-error" class="input-error"></p>
+      <!-- Card Expiration End -->
 
-  CVC
-  e.g. 123
+      <!-- CVC Start -->
+      <label for="cvc" class="form-label">CVC</label><br>
+      <input type="text" id="cvc" class="form-input" name="cvc" value="e.g. 123"><br>
+      <p id="cvc-error" class="input-error"></p>
+      <!-- CVC End -->
 
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+      <input type="submit" value="Confirm">
+    
+    </form>
+  </main>
+  <!-- Main End -->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <!-- Confirmation Container Start -->
+  <article id="confirmation-container" class="confirmation-container">
+    <div class="icon-complete"></div>
+    <h1 class="confirmation-headline">Thank you!</h1>
+    <p class="confirmation-copy">We've added your card details</p>
+    <div id="continue-btn" class="continue-btn">Continue</div>
+  </article>
+  <!-- Confirmation Container End -->
+  
+  <script src="main.js"></script>
 </body>
 </html>
